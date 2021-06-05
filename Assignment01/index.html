@@ -1,0 +1,86 @@
+<!--------------------------------------------------
+    2020S1 DM5212 Scripting Interactivity 1
+    Assignment 1
+
+    Author:     JGKC
+    Date:       19/05/2021
+    File Name:  index.html
+-------------------------------------------------->
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body style="display: flex;justify-content: center;">
+    <div id="all">
+        <div class="frame01"> <!-- Scene01A&01B -->
+            <!-- Background -->
+            <div id="house"></div>
+            <!-- Buttons/Caption -->
+                <!-- Start -->
+            <div onClick="Scene01A()" class="start">
+                <div id="start_EN"></div>
+                <div id="start_CN"></div>
+            </div>
+
+                <!-- Language -->
+            <div class="language">
+                <div class="lanuage_EN">
+                    <div id="language_EN_active"></div>
+                    <div onClick="EN_Delcare()" id="language_EN_inactive"></div>   
+                </div>
+                <div class="lanuage_CN">
+                    <div id="language_CN_active"></div>
+                    <div onClick="CN_Delcare()" id="language_CN_inactive"></div>
+                </div>
+            </div>
+                
+                <!-- Clickable Caption -->
+            <div onCLick="Scene01B()" class="caption" id="caption1">
+                <div class="EN" id="caption1_EN"></div>
+                <div class="CN" id="caption1_CN"></div>
+            </div>
+                <!-- Caption -->
+            <div class="caption" id="caption2">
+                <div class="EN" id="caption2_EN"></div>
+                <div class="CN" id="caption2_CN"></div>
+            </div>
+            <!-- Family Members Art Assets -->
+            <div id="family">
+                <div id="familyA">
+                    <div id="familyA1"></div>
+                    <div id="familyA2"></div>
+                    <div id="familyA3"></div>
+                </div>
+                <div id="familyB">
+                    <div id="FamilyB1"></div>
+                    <div id="familyB2"></div>
+                    <div id="familyB3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="frame02"> <!-- Scene02&02B -->
+            <!-- Background -->
+            <div id="HDB"></div>
+            <!-- Lion Dance Assets -->
+            <div class="lionA"></div>
+            <div class="lionB"></div>
+        </div>
+        <div class="frame03"> <!-- Scene?? -->
+
+        </div>
+        <div class="frame04"> <!-- Scene3B -->
+
+        </div>
+        <div class="frame05"> <!-- Scene3C/END -->
+                <div id="endScreen">
+                    <div onClick="Replay()" id="replay"></div>
+                    <div><a target="_blank" href="yeos.com.sg"><div id="website"></div></a></div>
+                </div>
+        </div> 
+    </div>
+    <!-- JavaScripts -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

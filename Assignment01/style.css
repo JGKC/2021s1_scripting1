@@ -1,0 +1,102 @@
+*{margin:0; padding: 0; box-sizing:border-box;}
+#all{width:300px; height:250px; position:relative;}
+#all>div {width:100%; height:100%; position: relative; overflow:hidden;}
+.CN {display:none}
+/**************************************************
+Frame01 - Scene 1A/1B
+**************************************************/
+/* Background */
+#house {
+    background:url("img/scene/Scene1_CN.svg"); 
+    width:500%;height:500%;
+    top:-375; position:absolute;
+}
+
+/* Start Button */
+.start>div{
+    width:80px; height:40px;
+    bottom: 20; right:0; position:absolute;
+    z-index:1; cursor:pointer;
+}
+#start_EN {background:url("img/ui/StartButton_EN.svg");}
+#start_CN {background:url("img/ui/StartButton_CN.svg");display:none;}
+
+/* Langauge Button */
+.language {width:120px; bottom: 20; left:20; position:absolute; display: flex; justify-content: space-between;}
+.language div{width:50px; height:25px; cursor:pointer; z-index:10;}
+
+#language_EN_active     {background:url("img/ui/ENButton_Active.svg");}
+#language_EN_inactive   {background:url("img/ui/ENButton_Inactive.svg");display: none;}
+#language_CN_active     {background:url("img/ui/CNButton_Active.svg");  display: none;}
+#language_CN_inactive   {background:url("img/ui/CNButton_Inactive.svg");}
+
+/* Caption1 */
+.caption {
+    width:250px; height:80px;
+    top: 20; left:25; position:absolute;
+    display:none; cursor: pointer; opacity: 0;
+}
+
+#caption1 {background:cadetblue;}
+#caption1_EN {background:cadetblue;}
+#caption1_CN {background:cadetblue;}
+
+/* Caption2 */
+
+
+/* 
+
+#all{width:300px; height:250px; position:relative;}
+
+#all>div {
+    width:100%; height:100%; position: relative; 
+    overflow:hidden;
+} 
+
+*/
+
+/* Family Art Assets */
+#family {width:100px; height:100px; bottom:30; position:absolute;}
+
+#familyA {left:-100; position:relative;}
+#familyA div {width:100px; height:100px;}
+
+#familyA1 {background:tomato}
+#familyA2 {background:hotpink}
+#familyA3 {background:skyblue}
+
+#familyB {top:-300;right:-300;position:relative;}
+#familyB div {width:100px; height:100px}
+
+#familyB1 {background:tomato}
+#familyB2 {background:hotpink}
+#familyB3 {background:skyblue}
+
+/**************************************************
+Frame02 - Scene 2A/2B
+**************************************************/
+
+.frame02 {
+    background: burlywood;
+}
+.frame03 {
+    background:cadetblue;
+
+}
+.frame04 {
+    background:gray;
+
+}
+.frame05 {
+    background:coral
+}
+
+
+/**************************************************
+Frame05 - END SCREEN
+**************************************************/
+#endScreen {width:120px; bottom: 20; left:20; position:absolute; display: flex; justify-content: space-between;}
+#endScreen>div{width:50px; height:50px; cursor:pointer; z-index:10;}
+
+#replay    {background:url("img/ui/Replay.svg");width:50px; height:50px;}
+#website   {background:url("img/ui/Website.svg");width:50px; height:50px;}
