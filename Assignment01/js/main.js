@@ -6,16 +6,14 @@
     Date:       05/06/2021
     File Name:  main.js
 **************************************************/
-function Background(){
-    // Background stuff?
-}
+function Background(){}
 Background()
 /**************************************************
 LANGAUGE SETTINGS
 **************************************************/
 // EN = English(Defualt) | CN = Chinese
-var EN=true
-var CN=false
+var EN = true
+var CN = false
 // Delacre EN as shown Language
 function EN_Delcare(){
     EN = true; CN = false;
@@ -66,7 +64,7 @@ function Scene01A(){
     var Scene01A = gsap.timeline();
         // Scene1A - Buttons leaving the Screen
         Scene01A.to(".start div", {duration:0.3, right:-80, 
-            onStart:backgroundAudio.play()
+            // onStart:backgroundAudio.play()
         },"Start");
         Scene01A.to(".language", {duration:0.3, bottom:-40}, "Start");
         // Scene1A - Background Zooming Effect
@@ -77,25 +75,28 @@ function Scene01A(){
         Scene01A.to("#familyA",{duration:1, x:150}, "Entering");
         Scene01A.to("#familyB",{duration:1, x:-150},"Entering");
 
-        Scene01A.to("#caption1",{duration:1, opacity:1, display:"block"},"Entering+=1");  
+        Scene01A.to("#caption1, #caption1 div",{duration:1, opacity:1,zIndex:10},"Entering+=1");  
 }
 
 function Scene01B(){
     // Scene1B - CNY Greetings Audio
-    if (EN = true){var GreetingsAudio=document.createElement("audio");GreetingsAudio.setAttribute("src","http://www.hscripts.com/tutorials/html/music.wav");}
-    else if (CN=true){var GreetingsAudio=document.createElement("audio");GreetingsAudio.setAttribute("src","http://www.hscripts.com/tutorials/html/music.wav");}
+    if (EN==true){var GreetingsAudio=document.createElement("audio");GreetingsAudio.setAttribute("src","http://www.hscripts.com/tutorials/html/music.wav");}
+    else if (CN==true){var GreetingsAudio=document.createElement("audio");GreetingsAudio.setAttribute("src","audio/RickRoll_mp3.mp3");}
+    console.log("EN:"+EN)
+    console.log("CN:"+CN)
     console.log(GreetingsAudio)
 
     
 
-    var Scene01B = gsap.timeline({onComplete: Scene02});
-
+    var Scene01B = gsap.timeline();
         // Scene1B - CNY Greetings
+        Scene01B.to("#caption1, #caption1 div",{duration:1, opacity:0,zIndex:-1},"Greetings");
+        Scene01B.to("#caption2, #caption2 div",{duration:1, opacity:1,zIndex:10},"Greetings"); 
         Scene01B.to("#familyA1, #familyB1",{duration:1, opacity:0, onStart:GreetingsAudio.play()}, "Greetings");
-        Scene01B.to("#familyA2, #familyB2",{duration:1, opacity:1}, "Greetings+=3");
+        Scene01B.to("#familyA2, #familyB2",{duration:1, opacity:1}, "Greetings");
         // Scene1B - Kid get AngBao
-        Scene01B.to("#familyA2, #familyB2",{duration:1, opacity:0}, "Greetings+=1");
-        Scene01B.to("#familyA3, #familyB3",{duration:1, opacity:1}, "Greetings+=1");
+        Scene01B.to("#familyA2, #familyB2",{duration:1, opacity:0}, "Greetings+=5");
+        Scene01B.to("#familyA3, #familyB3",{duration:1, opacity:1}, "Greetings+=5");
 }
 
 function Scene02(){
@@ -112,4 +113,4 @@ function Scene02(){
     {scale:1, bottom:0, left:0, duration:1},"SwitchBackground+1"); 
 }
 
-function Scene03(){}
+function Scene03(){};
